@@ -23,7 +23,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // })
 
 
-//filter - it returns an array of all matching elements
+// filter - it returns an array of all matching elements
 
 // const canDrink = ages.filter(function(age) {
 //   if(age >= 21) {
@@ -33,8 +33,6 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 const canDrink = ages.filter(age => age >= 21);
 
-console.log(canDrink);
-
 // let canDrink = [];
 // for(let i = 0; i < ages.length; i++) {
 //   if(ages[i] >= 21) {
@@ -42,3 +40,25 @@ console.log(canDrink);
 //   }
 // }
 //  console.log(canDrink);
+
+// Filter retail companies
+
+// const retailCompanies = companies.filter(function(company) {
+//   if(company.category === "Retail") {
+//     return true;
+//   }
+// }
+
+// console.log(retailCompanies);
+
+const retailCompanies = companies.filter(company => company.category === "Retail");
+
+// Get 80s companies
+
+const eightiesCompanies  = companies.filter(company => (company.start >= 1980 && company.start < 1990));
+
+// Get companies that lasted 10 years +
+
+const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+
+console.log(lastedTenYears);
